@@ -1,7 +1,6 @@
 Eraser Bot Frontend v1.2 Source Code
 
-The code builds in VC# 2008, uses .NET 2.0. It will not run in Linux without
-some tweaking, might be a nice side project.
+The code builds in VC# 2008 and uses .NET 2.0.
 
 Note that this software doesn't include eraser bot. Eraser bot ships with a bot configuration
 file setup to make use of the kw skin pack. You'll be needing that also, otherwise
