@@ -7,7 +7,7 @@ file setup to make use of the kw skin pack. You'll be needing that also, otherwi
 the bots in team-based games won't be appear as they should; females appear as males, yada yada.
 
 Eraser bot can be found here (grab eraser.zip): https://code.google.com/p/eraser-bot-frontend/downloads/list
-kw skin pack can be found here: http://quake2.radiac.net/downloads/skins.html
+The kw skin pack can be found here: http://quake2.radiac.net/downloads/skins.html
 
 Both eraser bot and the kw skin pack are not mine. Just want to make that clear.
 
