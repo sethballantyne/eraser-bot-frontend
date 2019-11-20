@@ -11,6 +11,8 @@ The kw skin pack can be found here: http://quake2.radiac.net/downloads/skins.htm
 
 Both eraser bot and the kw skin pack are not mine. Just want to make that clear.
 
+Screenshots are in the wiki.
+
 Comments, suggestions, questions or bugs send to <seth.ballantyne@gmail.com>
 
 Have fun!
