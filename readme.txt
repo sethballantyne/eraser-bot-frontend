@@ -1,6 +1,6 @@
 Eraser Bot Frontend v1.2 Source Code
 
-The code builds in VC# 2008 and uses .NET 2.0.
+The code builds in VC# 2008 and uses .NET 2.0. EBF is free software, released under the MIT license. 
 
 The latest, usable version of the software lives in the "builds" directory; along with the frontend, 
 it includes a zip of the eraser bot itself and the kw skin pack, if needed. Without the skin pack installed, 
