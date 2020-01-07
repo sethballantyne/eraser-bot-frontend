@@ -29,104 +29,104 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode151 = new System.Windows.Forms.TreeNode("Base1");
-            System.Windows.Forms.TreeNode treeNode152 = new System.Windows.Forms.TreeNode("Base2");
-            System.Windows.Forms.TreeNode treeNode153 = new System.Windows.Forms.TreeNode("Base3");
-            System.Windows.Forms.TreeNode treeNode154 = new System.Windows.Forms.TreeNode("Train");
-            System.Windows.Forms.TreeNode treeNode155 = new System.Windows.Forms.TreeNode("Bunk1");
-            System.Windows.Forms.TreeNode treeNode156 = new System.Windows.Forms.TreeNode("Ware1");
-            System.Windows.Forms.TreeNode treeNode157 = new System.Windows.Forms.TreeNode("Ware2");
-            System.Windows.Forms.TreeNode treeNode158 = new System.Windows.Forms.TreeNode("Jail1");
-            System.Windows.Forms.TreeNode treeNode159 = new System.Windows.Forms.TreeNode("Jail2");
-            System.Windows.Forms.TreeNode treeNode160 = new System.Windows.Forms.TreeNode("Jail3");
-            System.Windows.Forms.TreeNode treeNode161 = new System.Windows.Forms.TreeNode("Jail4");
-            System.Windows.Forms.TreeNode treeNode162 = new System.Windows.Forms.TreeNode("Jail5");
-            System.Windows.Forms.TreeNode treeNode163 = new System.Windows.Forms.TreeNode("Security");
-            System.Windows.Forms.TreeNode treeNode164 = new System.Windows.Forms.TreeNode("Match1");
-            System.Windows.Forms.TreeNode treeNode165 = new System.Windows.Forms.TreeNode("Mintro");
-            System.Windows.Forms.TreeNode treeNode166 = new System.Windows.Forms.TreeNode("Mine1");
-            System.Windows.Forms.TreeNode treeNode167 = new System.Windows.Forms.TreeNode("Mine2");
-            System.Windows.Forms.TreeNode treeNode168 = new System.Windows.Forms.TreeNode("Mine3");
-            System.Windows.Forms.TreeNode treeNode169 = new System.Windows.Forms.TreeNode("Mine4");
-            System.Windows.Forms.TreeNode treeNode170 = new System.Windows.Forms.TreeNode("Fact1");
-            System.Windows.Forms.TreeNode treeNode171 = new System.Windows.Forms.TreeNode("Fact2");
-            System.Windows.Forms.TreeNode treeNode172 = new System.Windows.Forms.TreeNode("Fact3");
-            System.Windows.Forms.TreeNode treeNode173 = new System.Windows.Forms.TreeNode("Power1");
-            System.Windows.Forms.TreeNode treeNode174 = new System.Windows.Forms.TreeNode("Power2");
-            System.Windows.Forms.TreeNode treeNode175 = new System.Windows.Forms.TreeNode("Cool1");
-            System.Windows.Forms.TreeNode treeNode176 = new System.Windows.Forms.TreeNode("Waste1");
-            System.Windows.Forms.TreeNode treeNode177 = new System.Windows.Forms.TreeNode("Waste2");
-            System.Windows.Forms.TreeNode treeNode178 = new System.Windows.Forms.TreeNode("Waste3");
-            System.Windows.Forms.TreeNode treeNode179 = new System.Windows.Forms.TreeNode("Biggun");
-            System.Windows.Forms.TreeNode treeNode180 = new System.Windows.Forms.TreeNode("Hangar1");
-            System.Windows.Forms.TreeNode treeNode181 = new System.Windows.Forms.TreeNode("Hangar2");
-            System.Windows.Forms.TreeNode treeNode182 = new System.Windows.Forms.TreeNode("Lab");
-            System.Windows.Forms.TreeNode treeNode183 = new System.Windows.Forms.TreeNode("Command");
-            System.Windows.Forms.TreeNode treeNode184 = new System.Windows.Forms.TreeNode("Strike");
-            System.Windows.Forms.TreeNode treeNode185 = new System.Windows.Forms.TreeNode("Space");
-            System.Windows.Forms.TreeNode treeNode186 = new System.Windows.Forms.TreeNode("City1");
-            System.Windows.Forms.TreeNode treeNode187 = new System.Windows.Forms.TreeNode("City2");
-            System.Windows.Forms.TreeNode treeNode188 = new System.Windows.Forms.TreeNode("City3");
-            System.Windows.Forms.TreeNode treeNode189 = new System.Windows.Forms.TreeNode("Boss1");
-            System.Windows.Forms.TreeNode treeNode190 = new System.Windows.Forms.TreeNode("Boss2");
-            System.Windows.Forms.TreeNode treeNode191 = new System.Windows.Forms.TreeNode("q2dm1");
-            System.Windows.Forms.TreeNode treeNode192 = new System.Windows.Forms.TreeNode("q2dm2");
-            System.Windows.Forms.TreeNode treeNode193 = new System.Windows.Forms.TreeNode("q2dm3");
-            System.Windows.Forms.TreeNode treeNode194 = new System.Windows.Forms.TreeNode("q2dm4");
-            System.Windows.Forms.TreeNode treeNode195 = new System.Windows.Forms.TreeNode("q2dm5");
-            System.Windows.Forms.TreeNode treeNode196 = new System.Windows.Forms.TreeNode("q2dm6");
-            System.Windows.Forms.TreeNode treeNode197 = new System.Windows.Forms.TreeNode("q2dm7");
-            System.Windows.Forms.TreeNode treeNode198 = new System.Windows.Forms.TreeNode("q2dm8");
-            System.Windows.Forms.TreeNode treeNode199 = new System.Windows.Forms.TreeNode("Official Maps", new System.Windows.Forms.TreeNode[] {
-            treeNode151,
-            treeNode152,
-            treeNode153,
-            treeNode154,
-            treeNode155,
-            treeNode156,
-            treeNode157,
-            treeNode158,
-            treeNode159,
-            treeNode160,
-            treeNode161,
-            treeNode162,
-            treeNode163,
-            treeNode164,
-            treeNode165,
-            treeNode166,
-            treeNode167,
-            treeNode168,
-            treeNode169,
-            treeNode170,
-            treeNode171,
-            treeNode172,
-            treeNode173,
-            treeNode174,
-            treeNode175,
-            treeNode176,
-            treeNode177,
-            treeNode178,
-            treeNode179,
-            treeNode180,
-            treeNode181,
-            treeNode182,
-            treeNode183,
-            treeNode184,
-            treeNode185,
-            treeNode186,
-            treeNode187,
-            treeNode188,
-            treeNode189,
-            treeNode190,
-            treeNode191,
-            treeNode192,
-            treeNode193,
-            treeNode194,
-            treeNode195,
-            treeNode196,
-            treeNode197,
-            treeNode198});
-            System.Windows.Forms.TreeNode treeNode200 = new System.Windows.Forms.TreeNode("Unofficial Maps");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Base1");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Base2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Base3");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Train");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Bunk1");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ware1");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Ware2");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Jail1");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Jail2");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Jail3");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Jail4");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Jail5");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Security");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Match1");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Mintro");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Mine1");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Mine2");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Mine3");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Mine4");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Fact1");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Fact2");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Fact3");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Power1");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Power2");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Cool1");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Waste1");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Waste2");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Waste3");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Biggun");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Hangar1");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Hangar2");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Lab");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Command");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Strike");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Space");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("City1");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("City2");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("City3");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Boss1");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Boss2");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("q2dm1");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("q2dm2");
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("q2dm3");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("q2dm4");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("q2dm5");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("q2dm6");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("q2dm7");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("q2dm8");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Official Maps", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21,
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26,
+            treeNode27,
+            treeNode28,
+            treeNode29,
+            treeNode30,
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34,
+            treeNode35,
+            treeNode36,
+            treeNode37,
+            treeNode38,
+            treeNode39,
+            treeNode40,
+            treeNode41,
+            treeNode42,
+            treeNode43,
+            treeNode44,
+            treeNode45,
+            treeNode46,
+            treeNode47,
+            treeNode48});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Unofficial Maps");
             this.tabControl = new System.Windows.Forms.TabControl();
             this.matchSettingsPage = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -138,7 +138,6 @@
             this.selectedMapsListBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.availableMapsAddAllButton = new System.Windows.Forms.Button();
             this.availableMapsAddButton = new System.Windows.Forms.Button();
             this.availableMapsTreeView = new System.Windows.Forms.TreeView();
             this.botsPage = new System.Windows.Forms.TabPage();
@@ -176,8 +175,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.teamListView = new EraserBotFrontend.TeamListView();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.teamListView = new EraserBotFrontend.TeamListView();
             this.tabControl.SuspendLayout();
             this.matchSettingsPage.SuspendLayout();
             this.mapsPage.SuspendLayout();
@@ -311,7 +310,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.availableMapsAddAllButton);
             this.panel1.Controls.Add(this.availableMapsAddButton);
             this.panel1.Controls.Add(this.availableMapsTreeView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -319,18 +317,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 222);
             this.panel1.TabIndex = 0;
-            // 
-            // availableMapsAddAllButton
-            // 
-            this.availableMapsAddAllButton.Enabled = false;
-            this.availableMapsAddAllButton.Location = new System.Drawing.Point(127, 32);
-            this.availableMapsAddAllButton.Name = "availableMapsAddAllButton";
-            this.availableMapsAddAllButton.Size = new System.Drawing.Size(75, 23);
-            this.availableMapsAddAllButton.TabIndex = 2;
-            this.availableMapsAddAllButton.Text = "Add &All";
-            this.toolTip.SetToolTip(this.availableMapsAddAllButton, "Adds all the maps within the selected root node \r\nto the match.");
-            this.availableMapsAddAllButton.UseVisualStyleBackColor = true;
-            this.availableMapsAddAllButton.Click += new System.EventHandler(this.availableMapsAddAllButton_Click);
             // 
             // availableMapsAddButton
             // 
@@ -346,114 +332,115 @@
             // 
             // availableMapsTreeView
             // 
+            this.availableMapsTreeView.CheckBoxes = true;
             this.availableMapsTreeView.Location = new System.Drawing.Point(3, 3);
             this.availableMapsTreeView.Name = "availableMapsTreeView";
-            treeNode151.Name = "Node2";
-            treeNode151.Text = "Base1";
-            treeNode152.Name = "Node4";
-            treeNode152.Text = "Base2";
-            treeNode153.Name = "Node5";
-            treeNode153.Text = "Base3";
-            treeNode154.Name = "Node6";
-            treeNode154.Text = "Train";
-            treeNode155.Name = "Node7";
-            treeNode155.Text = "Bunk1";
-            treeNode156.Name = "Node8";
-            treeNode156.Text = "Ware1";
-            treeNode157.Name = "Node9";
-            treeNode157.Text = "Ware2";
-            treeNode158.Name = "Node10";
-            treeNode158.Text = "Jail1";
-            treeNode159.Name = "Node11";
-            treeNode159.Text = "Jail2";
-            treeNode160.Name = "Node12";
-            treeNode160.Text = "Jail3";
-            treeNode161.Name = "Node13";
-            treeNode161.Text = "Jail4";
-            treeNode162.Name = "Node14";
-            treeNode162.Text = "Jail5";
-            treeNode163.Name = "Node15";
-            treeNode163.Text = "Security";
-            treeNode164.Name = "Node16";
-            treeNode164.Text = "Match1";
-            treeNode165.Name = "Node17";
-            treeNode165.Text = "Mintro";
-            treeNode166.Name = "Node18";
-            treeNode166.Text = "Mine1";
-            treeNode167.Name = "Node19";
-            treeNode167.Text = "Mine2";
-            treeNode168.Name = "Node20";
-            treeNode168.Text = "Mine3";
-            treeNode169.Name = "Node21";
-            treeNode169.Text = "Mine4";
-            treeNode170.Name = "Node22";
-            treeNode170.Text = "Fact1";
-            treeNode171.Name = "Node23";
-            treeNode171.Text = "Fact2";
-            treeNode172.Name = "Node24";
-            treeNode172.Text = "Fact3";
-            treeNode173.Name = "Node25";
-            treeNode173.Text = "Power1";
-            treeNode174.Name = "Node26";
-            treeNode174.Text = "Power2";
-            treeNode175.Name = "Node27";
-            treeNode175.Text = "Cool1";
-            treeNode176.Name = "Node28";
-            treeNode176.Text = "Waste1";
-            treeNode177.Name = "Node29";
-            treeNode177.Text = "Waste2";
-            treeNode178.Name = "Node30";
-            treeNode178.Text = "Waste3";
-            treeNode179.Name = "Node31";
-            treeNode179.Text = "Biggun";
-            treeNode180.Name = "Node32";
-            treeNode180.Text = "Hangar1";
-            treeNode181.Name = "Node33";
-            treeNode181.Text = "Hangar2";
-            treeNode182.Name = "Node34";
-            treeNode182.Text = "Lab";
-            treeNode183.Name = "Node35";
-            treeNode183.Text = "Command";
-            treeNode184.Name = "Node36";
-            treeNode184.Text = "Strike";
-            treeNode185.Name = "Node37";
-            treeNode185.Text = "Space";
-            treeNode186.Name = "Node38";
-            treeNode186.Text = "City1";
-            treeNode187.Name = "Node39";
-            treeNode187.Text = "City2";
-            treeNode188.Name = "Node40";
-            treeNode188.Text = "City3";
-            treeNode189.Name = "Node41";
-            treeNode189.Text = "Boss1";
-            treeNode190.Name = "Node42";
-            treeNode190.Text = "Boss2";
-            treeNode191.Name = "Node43";
-            treeNode191.Text = "q2dm1";
-            treeNode192.Name = "Node44";
-            treeNode192.Text = "q2dm2";
-            treeNode193.Name = "Node45";
-            treeNode193.Text = "q2dm3";
-            treeNode194.Name = "Node46";
-            treeNode194.Text = "q2dm4";
-            treeNode195.Name = "Node47";
-            treeNode195.Text = "q2dm5";
-            treeNode196.Name = "Node48";
-            treeNode196.Text = "q2dm6";
-            treeNode197.Name = "Node49";
-            treeNode197.Text = "q2dm7";
-            treeNode198.Name = "Node50";
-            treeNode198.Text = "q2dm8";
-            treeNode199.Name = "Node0";
-            treeNode199.Text = "Official Maps";
-            treeNode200.Name = "Node1";
-            treeNode200.Text = "Unofficial Maps";
+            treeNode1.Name = "Node2";
+            treeNode1.Text = "Base1";
+            treeNode2.Name = "Node4";
+            treeNode2.Text = "Base2";
+            treeNode3.Name = "Node5";
+            treeNode3.Text = "Base3";
+            treeNode4.Name = "Node6";
+            treeNode4.Text = "Train";
+            treeNode5.Name = "Node7";
+            treeNode5.Text = "Bunk1";
+            treeNode6.Name = "Node8";
+            treeNode6.Text = "Ware1";
+            treeNode7.Name = "Node9";
+            treeNode7.Text = "Ware2";
+            treeNode8.Name = "Node10";
+            treeNode8.Text = "Jail1";
+            treeNode9.Name = "Node11";
+            treeNode9.Text = "Jail2";
+            treeNode10.Name = "Node12";
+            treeNode10.Text = "Jail3";
+            treeNode11.Name = "Node13";
+            treeNode11.Text = "Jail4";
+            treeNode12.Name = "Node14";
+            treeNode12.Text = "Jail5";
+            treeNode13.Name = "Node15";
+            treeNode13.Text = "Security";
+            treeNode14.Name = "Node16";
+            treeNode14.Text = "Match1";
+            treeNode15.Name = "Node17";
+            treeNode15.Text = "Mintro";
+            treeNode16.Name = "Node18";
+            treeNode16.Text = "Mine1";
+            treeNode17.Name = "Node19";
+            treeNode17.Text = "Mine2";
+            treeNode18.Name = "Node20";
+            treeNode18.Text = "Mine3";
+            treeNode19.Name = "Node21";
+            treeNode19.Text = "Mine4";
+            treeNode20.Name = "Node22";
+            treeNode20.Text = "Fact1";
+            treeNode21.Name = "Node23";
+            treeNode21.Text = "Fact2";
+            treeNode22.Name = "Node24";
+            treeNode22.Text = "Fact3";
+            treeNode23.Name = "Node25";
+            treeNode23.Text = "Power1";
+            treeNode24.Name = "Node26";
+            treeNode24.Text = "Power2";
+            treeNode25.Name = "Node27";
+            treeNode25.Text = "Cool1";
+            treeNode26.Name = "Node28";
+            treeNode26.Text = "Waste1";
+            treeNode27.Name = "Node29";
+            treeNode27.Text = "Waste2";
+            treeNode28.Name = "Node30";
+            treeNode28.Text = "Waste3";
+            treeNode29.Name = "Node31";
+            treeNode29.Text = "Biggun";
+            treeNode30.Name = "Node32";
+            treeNode30.Text = "Hangar1";
+            treeNode31.Name = "Node33";
+            treeNode31.Text = "Hangar2";
+            treeNode32.Name = "Node34";
+            treeNode32.Text = "Lab";
+            treeNode33.Name = "Node35";
+            treeNode33.Text = "Command";
+            treeNode34.Name = "Node36";
+            treeNode34.Text = "Strike";
+            treeNode35.Name = "Node37";
+            treeNode35.Text = "Space";
+            treeNode36.Name = "Node38";
+            treeNode36.Text = "City1";
+            treeNode37.Name = "Node39";
+            treeNode37.Text = "City2";
+            treeNode38.Name = "Node40";
+            treeNode38.Text = "City3";
+            treeNode39.Name = "Node41";
+            treeNode39.Text = "Boss1";
+            treeNode40.Name = "Node42";
+            treeNode40.Text = "Boss2";
+            treeNode41.Name = "Node43";
+            treeNode41.Text = "q2dm1";
+            treeNode42.Name = "Node44";
+            treeNode42.Text = "q2dm2";
+            treeNode43.Name = "Node45";
+            treeNode43.Text = "q2dm3";
+            treeNode44.Name = "Node46";
+            treeNode44.Text = "q2dm4";
+            treeNode45.Name = "Node47";
+            treeNode45.Text = "q2dm5";
+            treeNode46.Name = "Node48";
+            treeNode46.Text = "q2dm6";
+            treeNode47.Name = "Node49";
+            treeNode47.Text = "q2dm7";
+            treeNode48.Name = "Node50";
+            treeNode48.Text = "q2dm8";
+            treeNode49.Name = "Node0";
+            treeNode49.Text = "Official Maps";
+            treeNode50.Name = "Node1";
+            treeNode50.Text = "Unofficial Maps";
             this.availableMapsTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode199,
-            treeNode200});
+            treeNode49,
+            treeNode50});
             this.availableMapsTreeView.Size = new System.Drawing.Size(121, 216);
             this.availableMapsTreeView.TabIndex = 0;
-            this.availableMapsTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.availableMapsTreeView_AfterSelect);
+            this.availableMapsTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.availableMapsTreeView_AfterCheck);
             // 
             // botsPage
             // 
@@ -882,7 +869,6 @@
         private System.Windows.Forms.Button selectedMapsRemoveAllButton;
         private System.Windows.Forms.Button selectedMapsRemoveButton;
         private System.Windows.Forms.ListBox selectedMapsListBox;
-        private System.Windows.Forms.Button availableMapsAddAllButton;
         private System.Windows.Forms.Button availableMapsAddButton;
         private System.Windows.Forms.TreeView availableMapsTreeView;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
