@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.fragLimitNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.timeLimitNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -46,6 +47,7 @@
             this.allowPowerupsCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fragLimitNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeLimitNumericUpDown)).BeginInit();
@@ -99,6 +101,7 @@
             this.viewableWeaponsCheckBox.Size = new System.Drawing.Size(115, 17);
             this.viewableWeaponsCheckBox.TabIndex = 16;
             this.viewableWeaponsCheckBox.Text = "Viewable weapons";
+            this.toolTip.SetToolTip(this.viewableWeaponsCheckBox, "Players can see the weapons carried by other \r\nplayers.");
             this.viewableWeaponsCheckBox.UseVisualStyleBackColor = true;
             // 
             // friendlyFireCheckBox
@@ -119,6 +122,7 @@
             this.allowExitCheckBox.Size = new System.Drawing.Size(70, 17);
             this.allowExitCheckBox.TabIndex = 14;
             this.allowExitCheckBox.Text = "Allow exit";
+            this.toolTip.SetToolTip(this.allowExitCheckBox, "Players can leave the level via exits.");
             this.allowExitCheckBox.UseVisualStyleBackColor = true;
             // 
             // allowCheatsCheckBox
@@ -129,6 +133,7 @@
             this.allowCheatsCheckBox.Size = new System.Drawing.Size(86, 17);
             this.allowCheatsCheckBox.TabIndex = 13;
             this.allowCheatsCheckBox.Text = "Allow cheats";
+            this.toolTip.SetToolTip(this.allowCheatsCheckBox, "Allow players to use cheat codes.");
             this.allowCheatsCheckBox.UseVisualStyleBackColor = true;
             // 
             // spawnFarthestCheckBox
@@ -140,6 +145,7 @@
             this.spawnFarthestCheckBox.TabIndex = 12;
             this.spawnFarthestCheckBox.Text = "Spawn farthest";
             this.spawnFarthestCheckBox.ThreeState = true;
+            this.toolTip.SetToolTip(this.spawnFarthestCheckBox, "Players are spawned as far as possible from each other.");
             this.spawnFarthestCheckBox.UseVisualStyleBackColor = true;
             // 
             // weaponStayCheckBox
@@ -150,6 +156,7 @@
             this.weaponStayCheckBox.Size = new System.Drawing.Size(89, 17);
             this.weaponStayCheckBox.TabIndex = 11;
             this.weaponStayCheckBox.Text = "Weapon stay";
+            this.toolTip.SetToolTip(this.weaponStayCheckBox, "Weapons scattered throughout the level never disappear when picked up.");
             this.weaponStayCheckBox.UseVisualStyleBackColor = true;
             // 
             // forceRespawnCheckBox
@@ -160,6 +167,7 @@
             this.forceRespawnCheckBox.Size = new System.Drawing.Size(96, 17);
             this.forceRespawnCheckBox.TabIndex = 10;
             this.forceRespawnCheckBox.Text = "Force respawn";
+            this.toolTip.SetToolTip(this.forceRespawnCheckBox, "Players are forced to respawn when they die.");
             this.forceRespawnCheckBox.UseVisualStyleBackColor = true;
             // 
             // infiniteAmmoCheckBox
@@ -170,6 +178,7 @@
             this.infiniteAmmoCheckBox.Size = new System.Drawing.Size(88, 17);
             this.infiniteAmmoCheckBox.TabIndex = 9;
             this.infiniteAmmoCheckBox.Text = "Infinite ammo";
+            this.toolTip.SetToolTip(this.infiniteAmmoCheckBox, "Each player has unlimited ammo.");
             this.infiniteAmmoCheckBox.UseVisualStyleBackColor = true;
             // 
             // allowArmourCheckBox
@@ -180,6 +189,7 @@
             this.allowArmourCheckBox.Size = new System.Drawing.Size(86, 17);
             this.allowArmourCheckBox.TabIndex = 8;
             this.allowArmourCheckBox.Text = "Allow armour";
+            this.toolTip.SetToolTip(this.allowArmourCheckBox, "Players can collect armour if the level contains any.");
             this.allowArmourCheckBox.UseVisualStyleBackColor = true;
             // 
             // allowHealthCheckBox
@@ -190,6 +200,7 @@
             this.allowHealthCheckBox.Size = new System.Drawing.Size(83, 17);
             this.allowHealthCheckBox.TabIndex = 7;
             this.allowHealthCheckBox.Text = "Allow health";
+            this.toolTip.SetToolTip(this.allowHealthCheckBox, "Health packs will be available to players if the level contains any.");
             this.allowHealthCheckBox.UseVisualStyleBackColor = true;
             // 
             // quadDropCheckBox
@@ -200,6 +211,8 @@
             this.quadDropCheckBox.Size = new System.Drawing.Size(76, 17);
             this.quadDropCheckBox.TabIndex = 6;
             this.quadDropCheckBox.Text = "Quad drop";
+            this.toolTip.SetToolTip(this.quadDropCheckBox, "If a player dies and is using Quad damage, it\'ll be dropped for other players to " +
+                    "pick up.");
             this.quadDropCheckBox.UseVisualStyleBackColor = true;
             // 
             // instantPowerupsCheckBox
@@ -210,6 +223,7 @@
             this.instantPowerupsCheckBox.Size = new System.Drawing.Size(110, 17);
             this.instantPowerupsCheckBox.TabIndex = 5;
             this.instantPowerupsCheckBox.Text = "Instant power ups";
+            this.toolTip.SetToolTip(this.instantPowerupsCheckBox, "Power ups picked up players are instantly activated.");
             this.instantPowerupsCheckBox.UseVisualStyleBackColor = true;
             // 
             // allowPowerupsCheckBox
@@ -220,6 +234,7 @@
             this.allowPowerupsCheckBox.Size = new System.Drawing.Size(103, 17);
             this.allowPowerupsCheckBox.TabIndex = 4;
             this.allowPowerupsCheckBox.Text = "Allow power ups";
+            this.toolTip.SetToolTip(this.allowPowerupsCheckBox, "Power ups are available to players if the level contains any.");
             this.allowPowerupsCheckBox.UseVisualStyleBackColor = true;
             this.allowPowerupsCheckBox.CheckedChanged += new System.EventHandler(this.allowPowerupsCheckBox_CheckedChanged);
             // 
@@ -231,6 +246,8 @@
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Frag limit";
+            this.toolTip.SetToolTip(this.label2, "The maximum number of kills a player can make. When the limit is reached, \r\nthe m" +
+                    "atch is over and the next map loads.");
             // 
             // label1
             // 
@@ -240,6 +257,8 @@
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Time limit (minutes)";
+            this.toolTip.SetToolTip(this.label1, "The amount of time in minutes each match lasts. 0 means this isn\'t used. \r\nWhen t" +
+                    "he limit is reached, the next map will load. ");
             // 
             // DMSettings
             // 
@@ -277,6 +296,7 @@
         private System.Windows.Forms.NumericUpDown fragLimitNumericUpDown;
         private System.Windows.Forms.NumericUpDown timeLimitNumericUpDown;
         protected System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

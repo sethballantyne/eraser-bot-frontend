@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.randomBotsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.randomBotsNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -38,10 +40,12 @@
             // skillLabel
             // 
             this.skillLabel.Location = new System.Drawing.Point(18, 112);
+            this.toolTip.SetToolTip(this.skillLabel, "The skill level of the bots.");
             // 
             // skillComboBox
             // 
             this.skillComboBox.Location = new System.Drawing.Point(50, 109);
+            this.toolTip.SetToolTip(this.skillComboBox, "The number of bots taking part in the match.");
             // 
             // groupBox1
             // 
@@ -62,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Number of bots ";
+            this.toolTip.SetToolTip(this.label1, "The number of bots taking part in the match.");
             // 
             // randomBotsNumericUpDown
             // 
@@ -74,6 +79,7 @@
             this.randomBotsNumericUpDown.Name = "randomBotsNumericUpDown";
             this.randomBotsNumericUpDown.Size = new System.Drawing.Size(53, 20);
             this.randomBotsNumericUpDown.TabIndex = 0;
+            this.toolTip.SetToolTip(this.randomBotsNumericUpDown, "The number of bots taking part in the match.");
             // 
             // RandomBotSelection
             // 
@@ -99,5 +105,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown randomBotsNumericUpDown;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
