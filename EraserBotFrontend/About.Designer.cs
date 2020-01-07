@@ -59,11 +59,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 32);
+            this.label2.Location = new System.Drawing.Point(87, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 13);
+            this.label2.Size = new System.Drawing.Size(191, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "©Copyright 2011 Seth Ballantyne";
+            this.label2.Text = "©Copyright 2010-2020 Seth Ballantyne";
             // 
             // label3
             // 
@@ -88,12 +88,12 @@
             // websiteLink
             // 
             this.websiteLink.AutoSize = true;
-            this.websiteLink.Location = new System.Drawing.Point(87, 56);
+            this.websiteLink.Location = new System.Drawing.Point(54, 57);
             this.websiteLink.Name = "websiteLink";
-            this.websiteLink.Size = new System.Drawing.Size(191, 13);
+            this.websiteLink.Size = new System.Drawing.Size(262, 13);
             this.websiteLink.TabIndex = 5;
             this.websiteLink.TabStop = true;
-            this.websiteLink.Text = "http://quxworld.webs.com/ebf/ebf.htm";
+            this.websiteLink.Text = "https://github.com/sethballantyne/eraser-bot-frontend";
             this.websiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.websiteLink_LinkClicked);
             // 
             // About
