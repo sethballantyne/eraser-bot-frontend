@@ -85,6 +85,7 @@
             this.fragLimitNumericUpDown.Name = "fragLimitNumericUpDown";
             this.fragLimitNumericUpDown.Size = new System.Drawing.Size(72, 20);
             this.fragLimitNumericUpDown.TabIndex = 18;
+            this.toolTip.SetToolTip(this.fragLimitNumericUpDown, "The maximum number of kills a player can make. When the limit is reached, ");
             // 
             // timeLimitNumericUpDown
             // 
@@ -92,6 +93,7 @@
             this.timeLimitNumericUpDown.Name = "timeLimitNumericUpDown";
             this.timeLimitNumericUpDown.Size = new System.Drawing.Size(72, 20);
             this.timeLimitNumericUpDown.TabIndex = 17;
+            this.toolTip.SetToolTip(this.timeLimitNumericUpDown, "The amount of time in minutes each match lasts. 0 means this isn\'t used. ");
             // 
             // viewableWeaponsCheckBox
             // 
