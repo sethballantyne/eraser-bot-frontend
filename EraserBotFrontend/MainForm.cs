@@ -140,6 +140,7 @@ namespace EraserBotFrontend
             else
             {
                 Init();
+                UpdateGUIWithGameData();
             }
 
             

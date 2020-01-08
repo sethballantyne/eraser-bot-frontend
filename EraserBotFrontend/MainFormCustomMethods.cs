@@ -152,9 +152,10 @@ namespace EraserBotFrontend
         /// <summary>
         /// Populates the model combo box
         /// </summary>
-        void PopulatePlayerModelsCombo()
+        void ClearAndPopulatePlayerModelsCombo()
         {
             string[] modelDirectories = Directory.GetDirectories(Quake2Paths.Player);
+            availableModels.Clear();
 
             foreach (string dirName in modelDirectories)
             {
@@ -171,6 +172,8 @@ namespace EraserBotFrontend
                     }
                 }
             }
+
+            modelComboBox.Items.Clear();
 
             foreach (Model model in availableModels)
             {
@@ -358,10 +361,6 @@ namespace EraserBotFrontend
         /// </summary>
         internal void Init()
         {
-            // a small kludge to handle when Irrlicht fails for whatever reason.
-            // IrrlichtLime doesn't provide much in the way of handling errors, so
-            // this must suffice for now. 
-
             string errMsg;
 
             try
@@ -389,27 +388,6 @@ namespace EraserBotFrontend
             
             try
             {
-                BotFile bf = new BotFile();
-
-                
-                botFileContents = bf.ParseFile(EraserPaths.BotsCfg);
-                if (botFileContents.Bots.Count == 0)
-                {
-                    MessageBox.Show(
-                        Resource.BotsFileEmpty, 
-                        "", 
-                        MessageBoxButtons.OK, 
-                        MessageBoxIcon.Exclamation
-                    );
-                }
-                else
-                {
-                    specificBotSelection.PopulateListView(botFileContents.Bots.ToArray());
-                    PopulateTeamControls(botFileContents.Teams.ToArray());
-                }
-
-                AddCustomMaps();
-
                 matchSettingsTabIndex = GetTabIndex(Resource.MatchSettingsTabText);
                 botsTabIndex = GetTabIndex(Resource.BotsTabText);
                 teamsTabIndex = GetTabIndex(Resource.TeamTabText);
@@ -419,9 +397,6 @@ namespace EraserBotFrontend
                 // we've taken note of where it's supposed to go when it's needed,
                 // so move it off to one side. 
                 tabBufferForm.AddTab(tabControl.TabPages[teamsTabIndex]);
-                
-
-                PopulatePlayerModelsCombo();
 
                 //botSelectionComboBox.SelectedIndex = 0;
                 //matchTypeComboBox.SelectedIndex = 0;
@@ -451,12 +426,63 @@ namespace EraserBotFrontend
             
         }
 
+        public void UpdateGUIWithGameData()
+        {
+            try
+            {
+                BotFile bf = new BotFile();
+
+                botFileContents = bf.ParseFile(EraserPaths.BotsCfg);
+                if (botFileContents.Bots.Count == 0)
+                {
+                    MessageBox.Show(
+                        Resource.BotsFileEmpty,
+                        "",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation
+                    );
+                }
+                else
+                {
+                    specificBotSelection.ClearAndPopulateListView(botFileContents.Bots.ToArray());
+                    ClearAndPopulateTeamControls(botFileContents.Teams.ToArray());
+                }
+
+                AddCustomMaps();
+
+                ClearAndPopulatePlayerModelsCombo();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(
+                    e.InnerException +
+                    Resource.FailedtoInitEBF +
+                    e.Message +
+                    Resource.PathsReset +
+                    e.TargetSite +
+                    e.StackTrace,
+                    Resource.EBFInitErrorTitle,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+
+                Quake2Paths.Root = String.Empty;
+                EraserPaths.Base = String.Empty;
+            }
+        }
+
         /// <summary>
         /// Parses the maps stored in any custom maps stored in baseq2/maps/ and 
         /// adds them to the map treeview.
         /// </summary>
         private void AddCustomMaps()
         {
+            // remove any maps currently within withe tree view;
+            // needed when the user decides to change the Q2 installation
+            // EBF points to.
+            availableMapsTreeView.Nodes[1].Nodes.Clear();
+
             if (Directory.Exists(Quake2Paths.BaseQ2 + "//maps//"))
             {
                 string[] mapDirectoryContents = Directory.GetFiles(Quake2Paths.BaseQ2 + "//maps//");
@@ -510,8 +536,18 @@ namespace EraserBotFrontend
                 tabControl.TabPages.Remove(tabControl.TabPages[tabIndex]);
         }
 
-        private void PopulateTeamControls(Team[] teams)
+        private void ClearAndPopulateTeamControls(Team[] teams)
         {
+            if (playerTeamComboBox.Items.Count > 0)
+            {
+                playerTeamComboBox.Items.Clear();
+            }
+
+            if (teamListView.Items.Count > 0)
+            {
+                teamListView.Items.Clear();
+            }
+
             for (int i = 0; i < teams.Length; i++)
             {
                 teamListView.AddTeam(teams[i]);

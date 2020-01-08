@@ -194,8 +194,8 @@ namespace EraserBotFrontend
 
 
             // changed the paths so reload
-            mainForm.Init();
-
+            //mainForm.Init();
+            mainForm.UpdateGUIWithGameData();
             applyButton.Enabled = false;
         }
 
