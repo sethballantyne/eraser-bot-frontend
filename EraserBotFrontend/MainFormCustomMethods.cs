@@ -276,7 +276,7 @@ namespace EraserBotFrontend
                 {
                     string lowerCaseFileName = fileInfo.Name.ToLower();
 
-                    if (lowerCaseFileName != "weapon.pcx" && !lowerCaseFileName.Contains(".pcx.pcx") &&
+                    if (!IsWeaponSkin(lowerCaseFileName) && !lowerCaseFileName.Contains(".pcx.pcx") &&
                         !lowerCaseFileName.Contains("_i.pcx"))
                     {
                         // not the weapon skin, nor an icon for a skin so assume its valid
@@ -299,6 +299,29 @@ namespace EraserBotFrontend
             return validSkins.ToArray();
         }
 
+        /// <summary>
+        /// Returns true if the specified skin is a weapon skin, else returns false.
+        /// </summary>
+        bool IsWeaponSkin(string skinName)
+        {
+            if (skinName == "w_blaster.pcx"     ||
+               skinName == "w_chaingun.pcx"     ||
+               skinName == "w_glauncher.pcx"    ||
+               skinName == "w_grapple.pcx"      ||
+               skinName == "w_hyperblaster.pcx" ||
+               skinName == "w_machinegun.pcx"   ||
+               skinName == "w_railgun.pcx"      ||
+               skinName == "w_rlauncher.pcx"    ||
+               skinName == "w_shotgun.pcx"      ||
+               skinName == "w_sshotgun.pcx"     ||
+               skinName == "w_bfg.pcx"          ||
+               skinName == "weapon.pcx")
+            {
+                return true;
+            }
+
+            return false;
+         }
         /// <summary>
         /// Generates the command line arguments related to player
         /// model, skin, crosshair and name
@@ -386,7 +409,6 @@ namespace EraserBotFrontend
                 }
 
                 AddCustomMaps();
-
 
                 matchSettingsTabIndex = GetTabIndex(Resource.MatchSettingsTabText);
                 botsTabIndex = GetTabIndex(Resource.BotsTabText);
