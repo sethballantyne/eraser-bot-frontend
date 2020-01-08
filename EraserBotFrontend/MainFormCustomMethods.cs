@@ -396,6 +396,7 @@ namespace EraserBotFrontend
                 // The team tab isn't supposed to be visible initially and
                 // we've taken note of where it's supposed to go when it's needed,
                 // so move it off to one side. 
+                teamsTabIndex = -1;
                 tabBufferForm.AddTab(tabControl.TabPages[teamsTabIndex]);
 
                 //botSelectionComboBox.SelectedIndex = 0;
@@ -408,13 +409,9 @@ namespace EraserBotFrontend
             }
             catch (Exception e)
             {
+                string errorMessage = String.Format("Failed to initialise EBF: {0}\n\n{1}", e.Message, e.StackTrace);
                 MessageBox.Show(
-                    e.InnerException +  
-                    Resource.FailedtoInitEBF + 
-                    e.Message + 
-                    Resource.PathsReset + 
-                    e.TargetSite + 
-                    e.StackTrace,
+                    errorMessage,
                     Resource.EBFInitErrorTitle, 
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error
