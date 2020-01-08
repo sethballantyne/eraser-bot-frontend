@@ -57,6 +57,13 @@ namespace EraserBotFrontend
                 if (DirContainsValidQuake2Installation(folderBrowserDialog.SelectedPath))
                 {
                     q2PathTextBox.Text = folderBrowserDialog.SelectedPath;
+                    
+                    // attempt to auto-detect eraser
+                    string eraserPath = folderBrowserDialog.SelectedPath + @"\Eraser";
+                    if (DirContainsValidEraserInstallation(eraserPath))
+                    {
+                        eraserPathTextBox.Text = eraserPath;
+                    }
 
                     if (eraserPathTextBox.Text != String.Empty)
                     {
@@ -166,7 +173,7 @@ namespace EraserBotFrontend
         /// false</returns>
         private bool DirContainsValidEraserInstallation(string path)
         {
-            // TODO: this is missing the glaringly obvious, namelty checking the 
+            // TODO: this is missing the glaringly obvious, namely checking the 
             // name of the directory the DLL is kept in. 
             if (File.Exists(path + "//gamex86.dll"))
             {
