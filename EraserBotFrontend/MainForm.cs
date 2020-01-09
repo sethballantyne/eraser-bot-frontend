@@ -122,6 +122,9 @@ namespace EraserBotFrontend
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            InitIrrlicht();
+            InitGUI();
+
             if (Quake2Paths.Root == String.Empty || 
                 EraserPaths.Base == String.Empty)
             {
@@ -139,11 +142,9 @@ namespace EraserBotFrontend
             }
             else
             {
-                Init();
+               
                 UpdateGUIWithGameData();
             }
-
-            
         }
 
         private void launchButton_Click(object sender, EventArgs e)

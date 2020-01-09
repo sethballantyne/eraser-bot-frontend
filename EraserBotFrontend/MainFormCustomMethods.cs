@@ -356,20 +356,15 @@ namespace EraserBotFrontend
             return playerArgs.ToString();
         }
 
-        /// <summary>
-        /// As the name suggests, where all the initialisation happens. 
-        /// </summary>
-        internal void Init()
+        internal void InitIrrlicht()
         {
-            string errMsg;
-
             try
             {
                 modelViewer = new MD2Viewer(modelPictureBox);
             }
             catch (Exception e)
             {
-                errMsg = Resource.IrrlichtInitializationErrorMsg +
+                string errMsg = Resource.IrrlichtInitializationErrorMsg +
                     Environment.NewLine +
                     "Reason: " + e.Message +
                     Environment.NewLine +
@@ -378,14 +373,19 @@ namespace EraserBotFrontend
 
                 MessageBox.Show(
                     errMsg,
-                    Resource.Error, 
-                    MessageBoxButtons.OK, 
+                    Resource.Error,
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                     );
 
                 disableMD2Viewer = true;
             }
-            
+        }
+        /// <summary>
+        /// As the name suggests, where all the initialisation happens. 
+        /// </summary>
+        internal void InitGUI()
+        {
             try
             {
                 matchSettingsTabIndex = GetTabIndex(Resource.MatchSettingsTabText);
@@ -396,7 +396,6 @@ namespace EraserBotFrontend
                 // The team tab isn't supposed to be visible initially and
                 // we've taken note of where it's supposed to go when it's needed,
                 // so move it off to one side. 
-                teamsTabIndex = -1;
                 tabBufferForm.AddTab(tabControl.TabPages[teamsTabIndex]);
 
                 //botSelectionComboBox.SelectedIndex = 0;
