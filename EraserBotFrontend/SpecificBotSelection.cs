@@ -49,8 +49,19 @@ namespace EraserBotFrontend
             //    skillComboBox.SelectedIndex = 0;
         }
 
-        public void PopulateListView(Bot[] bots)
+        /// <summary>
+        /// Adds the specified bots to the list view. 
+        /// If bots already exist in the list view, it'll be cleared before
+        /// they're added. 
+        /// </summary>
+        /// <param name="bots"></param>
+        public void ClearAndPopulateListView(Bot[] bots)
         {
+            if (specificBotsListView.Items.Count > 0)
+            {
+                specificBotsListView.Items.Clear();
+            }
+
             foreach (Bot b in bots)
             {
                 specificBotsListView.AddBot(b);

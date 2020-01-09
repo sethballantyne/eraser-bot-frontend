@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.skillLabel = new System.Windows.Forms.Label();
             this.skillComboBox = new System.Windows.Forms.ComboBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // skillLabel
@@ -40,6 +42,7 @@
             this.skillLabel.Size = new System.Drawing.Size(26, 13);
             this.skillLabel.TabIndex = 7;
             this.skillLabel.Text = "Skill";
+            this.toolTip.SetToolTip(this.skillLabel, "The skill level of the bots.");
             // 
             // skillComboBox
             // 
@@ -54,6 +57,7 @@
             this.skillComboBox.Name = "skillComboBox";
             this.skillComboBox.Size = new System.Drawing.Size(89, 21);
             this.skillComboBox.TabIndex = 8;
+            this.toolTip.SetToolTip(this.skillComboBox, "The skill level of the bots.");
             // 
             // CommonBotControlsForm
             // 
@@ -73,6 +77,7 @@
 
         protected System.Windows.Forms.Label skillLabel;
         protected System.Windows.Forms.ComboBox skillComboBox;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

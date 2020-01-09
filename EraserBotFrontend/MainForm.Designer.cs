@@ -138,7 +138,6 @@
             this.selectedMapsListBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.availableMapsAddAllButton = new System.Windows.Forms.Button();
             this.availableMapsAddButton = new System.Windows.Forms.Button();
             this.availableMapsTreeView = new System.Windows.Forms.TreeView();
             this.botsPage = new System.Windows.Forms.TabPage();
@@ -146,7 +145,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.teamsPage = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.teamListView = new EraserBotFrontend.TeamListView();
             this.playerTeamComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -177,6 +175,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.teamListView = new EraserBotFrontend.TeamListView();
             this.tabControl.SuspendLayout();
             this.matchSettingsPage.SuspendLayout();
             this.mapsPage.SuspendLayout();
@@ -272,6 +272,7 @@
             this.selectedMapsRemoveAllButton.Size = new System.Drawing.Size(75, 23);
             this.selectedMapsRemoveAllButton.TabIndex = 2;
             this.selectedMapsRemoveAllButton.Text = "Re&move All";
+            this.toolTip.SetToolTip(this.selectedMapsRemoveAllButton, "Remove all the selected maps from the match.");
             this.selectedMapsRemoveAllButton.UseVisualStyleBackColor = true;
             this.selectedMapsRemoveAllButton.Click += new System.EventHandler(this.selectedMapsRemoveAllButton_Click);
             // 
@@ -283,6 +284,7 @@
             this.selectedMapsRemoveButton.Size = new System.Drawing.Size(75, 23);
             this.selectedMapsRemoveButton.TabIndex = 1;
             this.selectedMapsRemoveButton.Text = "&Remove";
+            this.toolTip.SetToolTip(this.selectedMapsRemoveButton, "Remove the selected map from the match.");
             this.selectedMapsRemoveButton.UseVisualStyleBackColor = true;
             this.selectedMapsRemoveButton.Click += new System.EventHandler(this.selectedMapsRemoveButton_Click);
             // 
@@ -308,7 +310,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.availableMapsAddAllButton);
             this.panel1.Controls.Add(this.availableMapsAddButton);
             this.panel1.Controls.Add(this.availableMapsTreeView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -316,17 +317,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 222);
             this.panel1.TabIndex = 0;
-            // 
-            // availableMapsAddAllButton
-            // 
-            this.availableMapsAddAllButton.Enabled = false;
-            this.availableMapsAddAllButton.Location = new System.Drawing.Point(127, 32);
-            this.availableMapsAddAllButton.Name = "availableMapsAddAllButton";
-            this.availableMapsAddAllButton.Size = new System.Drawing.Size(75, 23);
-            this.availableMapsAddAllButton.TabIndex = 2;
-            this.availableMapsAddAllButton.Text = "Add &All";
-            this.availableMapsAddAllButton.UseVisualStyleBackColor = true;
-            this.availableMapsAddAllButton.Click += new System.EventHandler(this.availableMapsAddAllButton_Click);
             // 
             // availableMapsAddButton
             // 
@@ -336,11 +326,13 @@
             this.availableMapsAddButton.Size = new System.Drawing.Size(75, 23);
             this.availableMapsAddButton.TabIndex = 1;
             this.availableMapsAddButton.Text = "&Add";
+            this.toolTip.SetToolTip(this.availableMapsAddButton, "Add the selected map to the list of maps to use for the match.");
             this.availableMapsAddButton.UseVisualStyleBackColor = true;
             this.availableMapsAddButton.Click += new System.EventHandler(this.availableMapsAddButton_Click);
             // 
             // availableMapsTreeView
             // 
+            this.availableMapsTreeView.CheckBoxes = true;
             this.availableMapsTreeView.Location = new System.Drawing.Point(3, 3);
             this.availableMapsTreeView.Name = "availableMapsTreeView";
             treeNode1.Name = "Node2";
@@ -448,7 +440,7 @@
             treeNode50});
             this.availableMapsTreeView.Size = new System.Drawing.Size(121, 216);
             this.availableMapsTreeView.TabIndex = 0;
-            this.availableMapsTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.availableMapsTreeView_AfterSelect);
+            this.availableMapsTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.availableMapsTreeView_AfterCheck);
             // 
             // botsPage
             // 
@@ -507,17 +499,6 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opposing team(s)";
-            // 
-            // teamListView
-            // 
-            this.teamListView.CheckBoxes = true;
-            this.teamListView.GridLines = true;
-            this.teamListView.Location = new System.Drawing.Point(6, 19);
-            this.teamListView.Name = "teamListView";
-            this.teamListView.Size = new System.Drawing.Size(414, 141);
-            this.teamListView.TabIndex = 0;
-            this.teamListView.UseCompatibleStateImageBehavior = false;
-            this.teamListView.View = System.Windows.Forms.View.Details;
             // 
             // playerTeamComboBox
             // 
@@ -792,7 +773,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -800,6 +781,17 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // teamListView
+            // 
+            this.teamListView.CheckBoxes = true;
+            this.teamListView.GridLines = true;
+            this.teamListView.Location = new System.Drawing.Point(6, 19);
+            this.teamListView.Name = "teamListView";
+            this.teamListView.Size = new System.Drawing.Size(414, 141);
+            this.teamListView.TabIndex = 0;
+            this.teamListView.UseCompatibleStateImageBehavior = false;
+            this.teamListView.View = System.Windows.Forms.View.Details;
             // 
             // MainForm
             // 
@@ -877,7 +869,6 @@
         private System.Windows.Forms.Button selectedMapsRemoveAllButton;
         private System.Windows.Forms.Button selectedMapsRemoveButton;
         private System.Windows.Forms.ListBox selectedMapsListBox;
-        private System.Windows.Forms.Button availableMapsAddAllButton;
         private System.Windows.Forms.Button availableMapsAddButton;
         private System.Windows.Forms.TreeView availableMapsTreeView;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -893,6 +884,7 @@
         private System.Windows.Forms.ComboBox playerTeamComboBox;
         private System.Windows.Forms.Label label4;
         private TeamListView teamListView;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

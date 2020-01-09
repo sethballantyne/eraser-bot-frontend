@@ -122,6 +122,9 @@ namespace EraserBotFrontend
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            InitIrrlicht();
+            InitGUI();
+
             if (Quake2Paths.Root == String.Empty || 
                 EraserPaths.Base == String.Empty)
             {
@@ -139,10 +142,9 @@ namespace EraserBotFrontend
             }
             else
             {
-                Init();
+               
+                UpdateGUIWithGameData();
             }
-
-            
         }
 
         private void launchButton_Click(object sender, EventArgs e)
@@ -484,55 +486,20 @@ namespace EraserBotFrontend
             aboutForm.ShowDialog();
         }
 
-        private void availableMapsTreeView_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            // if a parent node has one of more child nodes, allow the
-            // user to add all the child nodes to selectedMapsListBox
-            if (availableMapsTreeView.SelectedNode.Nodes.Count > 0)
-            {
-                availableMapsAddAllButton.Enabled = true;
-            }
-            else
-            {
-                availableMapsAddAllButton.Enabled = false;
-            }
-
-            if (availableMapsTreeView.SelectedNode.Level > 0)
-            {
-                availableMapsAddButton.Enabled = true;
-                availableMapsAddAllButton.Enabled = true;
-            }
-            else
-            {
-                availableMapsAddButton.Enabled = false;
-                
-            }
-        }
-
         private void availableMapsAddButton_Click(object sender, EventArgs e)
         {
-            if (availableMapsTreeView.SelectedNode.Level > 0)
+            for (int i = 0; i < availableMapsTreeView.Nodes.Count; i++) // root nodes
             {
-                string mapName = availableMapsTreeView.SelectedNode.Text;
-                selectedMapsListBox.Items.Add(mapName);
-
-                if (selectedMapsRemoveAllButton.Enabled == false)
-                    selectedMapsRemoveAllButton.Enabled = true;
-            }
-            
-        }
-
-        private void availableMapsAddAllButton_Click(object sender, EventArgs e)
-        {
-            foreach (TreeNode officialMap in availableMapsTreeView.SelectedNode.Nodes)
-            {
-                selectedMapsListBox.Items.Add(officialMap.Text);
+                for (int j = 0; j < availableMapsTreeView.Nodes[i].Nodes.Count; j++) 
+                {
+                    if (availableMapsTreeView.Nodes[i].Nodes[j].Checked)
+                    {
+                        selectedMapsListBox.Items.Add(availableMapsTreeView.Nodes[i].Nodes[j].Text);
+                    }
+                }
             }
 
-            if (selectedMapsListBox.Items.Count > 0)
-            {
-                selectedMapsRemoveAllButton.Enabled = true;
-            }
+            selectedMapsRemoveAllButton.Enabled = true;
         }
 
         private void selectedMapsRemoveButton_Click(object sender, EventArgs e)
@@ -573,6 +540,66 @@ namespace EraserBotFrontend
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void availableMapsTreeView_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node.Parent == null) // e.Node is a root node
+            {
+                int count = 0;
+
+                // checked/unchecked a root node; check/uncheck all the child nodes.
+                foreach (TreeNode childNode in e.Node.Nodes)
+                {
+                    childNode.Checked = e.Node.Checked;
+                    count++;
+                }
+
+                if (count > 0) // checked/unchecked at least 1 child node
+                {
+                    availableMapsAddButton.Enabled = e.Node.Checked;
+                }
+            }
+            else if (!e.Node.Checked && NodesChecked(availableMapsTreeView) == 0)
+            {
+                // we've unchecked the node and there's no other nodes checked, so
+                // disable the add map button.
+                availableMapsAddButton.Enabled = false;
+            }
+            else
+            {
+                // child node has been checked.
+                availableMapsAddButton.Enabled = true;
+            }
+
+        }
+
+        /// <summary>
+        /// Returns the number of nodes checked in the specified TreeView.
+        /// </summary>
+        /// <returns>the number of checked nodes within the treeview.</returns>
+        /// <exception cref="ArgumentNullException">treeView is null.</exception>
+        private int NodesChecked(TreeView treeView)
+        {
+            if (treeView == null)
+            {
+                throw new ArgumentNullException("treeView");
+            }
+
+            int count = 0;
+
+            for (int i = 0; i < treeView.Nodes.Count; i++)
+            {
+                for (int j = 0; j < treeView.Nodes[i].Nodes.Count; j++)
+                {
+                    if (treeView.Nodes[i].Nodes[j].Checked)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
         }
     }
 }

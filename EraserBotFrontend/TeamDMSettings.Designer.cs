@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.teamsbyModelCheckBox = new System.Windows.Forms.CheckBox();
             this.teamsbySkinCheckBox = new System.Windows.Forms.CheckBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +50,7 @@
             this.teamsbyModelCheckBox.Size = new System.Drawing.Size(103, 17);
             this.teamsbyModelCheckBox.TabIndex = 19;
             this.teamsbyModelCheckBox.Text = "Teams by model";
+            this.toolTip.SetToolTip(this.teamsbyModelCheckBox, "Players are grouped into teams based on their model.\r\n");
             this.teamsbyModelCheckBox.UseVisualStyleBackColor = true;
             // 
             // teamsbySkinCheckBox
@@ -58,6 +61,7 @@
             this.teamsbySkinCheckBox.Size = new System.Drawing.Size(94, 17);
             this.teamsbySkinCheckBox.TabIndex = 20;
             this.teamsbySkinCheckBox.Text = "Teams by skin";
+            this.toolTip.SetToolTip(this.teamsbySkinCheckBox, "Players are grouped into teams based on their skin.");
             this.teamsbySkinCheckBox.UseVisualStyleBackColor = true;
             // 
             // TeamDMSettings
@@ -77,6 +81,7 @@
 
         private System.Windows.Forms.CheckBox teamsbyModelCheckBox;
         private System.Windows.Forms.CheckBox teamsbySkinCheckBox;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

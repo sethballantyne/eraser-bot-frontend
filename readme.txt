@@ -1,12 +1,10 @@
-Eraser Bot Frontend v1.2 Source Code
+Eraser Bot Frontend v1.3 Source Code
 
-The code builds in VC# 2008 and uses .NET 2.0. EBF is free software, released under the MIT license. 
-
-The latest, usable version of the software lives in the "builds" directory; along with the frontend, 
-it includes a zip of the eraser bot itself and the kw skin pack, if needed. Without the skin pack installed, 
-the bots in team-based games won't be appear as they should; females appear as males, yada yada.
 
 Both eraser bot and the kw skin pack are not mine. Just want to make that clear.
+
+To rebuild from source code, you'll need the IrrlichLime assembly and Irrlicht itself; you'll find them
+in the either a zipped build or in the repo's bin directory.
 
 Screenshots are in the wiki.
 
@@ -15,4 +13,3 @@ Comments, suggestions, questions or bugs send to <seth.ballantyne@gmail.com>
 Have fun!
 
 - Seth.
-

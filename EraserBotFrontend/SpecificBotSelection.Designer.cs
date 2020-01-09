@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.botSelectionCounterLabel = new System.Windows.Forms.Label();
             this.advancedOptionsButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.specificBotsListView = new EraserBotFrontend.BotListView();
             this.botParseProgressBar = new System.Windows.Forms.ProgressBar();
             this.selectedBotCountLabel = new System.Windows.Forms.Label();
-            this.specificBotsListView = new EraserBotFrontend.BotListView();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +76,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Specific Bots";
             // 
+            // specificBotsListView
+            // 
+            this.specificBotsListView.CheckBoxes = true;
+            this.specificBotsListView.GridLines = true;
+            this.specificBotsListView.Location = new System.Drawing.Point(6, 19);
+            this.specificBotsListView.Name = "specificBotsListView";
+            this.specificBotsListView.Size = new System.Drawing.Size(420, 151);
+            this.specificBotsListView.TabIndex = 2;
+            this.specificBotsListView.UseCompatibleStateImageBehavior = false;
+            this.specificBotsListView.View = System.Windows.Forms.View.Details;
+            this.specificBotsListView.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.specificBotsListView_ItemChecked);
+            this.specificBotsListView.SelectedIndexChanged += new System.EventHandler(this.specificBotsListView_SelectedIndexChanged);
+            this.specificBotsListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.specificBotsListView_ColumnClick);
+            // 
             // botParseProgressBar
             // 
             this.botParseProgressBar.Location = new System.Drawing.Point(215, 232);
@@ -89,19 +105,6 @@
             this.selectedBotCountLabel.Name = "selectedBotCountLabel";
             this.selectedBotCountLabel.Size = new System.Drawing.Size(0, 13);
             this.selectedBotCountLabel.TabIndex = 9;
-            // 
-            // specificBotsListView
-            // 
-            this.specificBotsListView.GridLines = true;
-            this.specificBotsListView.Location = new System.Drawing.Point(6, 19);
-            this.specificBotsListView.Name = "specificBotsListView";
-            this.specificBotsListView.Size = new System.Drawing.Size(420, 151);
-            this.specificBotsListView.TabIndex = 2;
-            this.specificBotsListView.UseCompatibleStateImageBehavior = false;
-            this.specificBotsListView.View = System.Windows.Forms.View.Details;
-            this.specificBotsListView.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.specificBotsListView_ItemChecked);
-            this.specificBotsListView.SelectedIndexChanged += new System.EventHandler(this.specificBotsListView_SelectedIndexChanged);
-            this.specificBotsListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.specificBotsListView_ColumnClick);
             // 
             // SpecificBotSelection
             // 
@@ -135,6 +138,7 @@
         private System.Windows.Forms.Label selectedBotCountLabel;
         private System.Windows.Forms.ProgressBar botParseProgressBar;
         private BotListView specificBotsListView;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

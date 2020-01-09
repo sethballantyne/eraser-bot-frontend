@@ -115,7 +115,7 @@ namespace EraserBotFrontend {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to initialise EBF. Reason:.
+        ///   Looks up a localized string similar to Failed to initialise EBF.
         /// </summary>
         internal static string FailedtoInitEBF {
             get {
